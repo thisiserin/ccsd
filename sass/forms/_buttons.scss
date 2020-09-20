@@ -1,0 +1,21 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0;
+	border-radius: 4px;
+	background: $color__background-button;
+	color: $white;
+	@include font-size(0.9);
+	line-height: 1;
+	padding: .6rem 2rem;
+	text-transform: uppercase;
+	transition: all .2s ease-out;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $color__background-button-hover;
+		box-shadow: inset 1px 1px 5px 0 rgba(0,0,0,.2);
+	}
+}

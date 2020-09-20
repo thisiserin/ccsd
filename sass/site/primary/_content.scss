@@ -1,0 +1,86 @@
+.site-content {
+  padding: 1em;
+}
+
+.page-header {
+  background-color: $darkblue;
+  background-position: bottom right, center center;
+  background-repeat: no-repeat;
+  background-size: 100% 30px, cover;
+  color: $white;
+  padding: 1em 1em 50px;
+
+  h1 {
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+  }
+}
+
+.full-width-bg {
+  margin-top: -1.5em;
+  margin-left: -1em !important;
+  margin-right: -1em !important;
+  max-width: 100vw !important;
+}
+
+.col-1-3,
+.col-2-3 {
+  flex-basis: 100%;
+}
+
+.boxed-testimonials {
+  @include boxed;
+}
+
+.ccsd-map {
+  @include boxed;
+}
+
+.boxed-rates {
+  @include boxed;
+  padding: 1em 0;
+
+  h3 {
+    height: 2em;
+    line-height: 1;
+    margin-top: 1em;
+    padding: 0 .5em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.1);
+    text-transform: uppercase;
+  }
+  figure {
+    margin: 0;
+  }
+  p {
+    background: $blue;
+    color: $white;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    padding: .5em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+  }
+}
+
+.ugb-accordion.ugb-accordion--design-plain .ugb-accordion__heading {
+  background: $blue;
+  color: $white;
+  padding: .75em 1em;
+}
+.ugb-accordion__heading h4 {
+  color: $white;
+  @include font-size(1.3);
+}
+
+@media screen and (min-width:$query__small) {
+  .page-header {
+    padding: 2em 0 50px;
+  }
+  .col-1-3 {
+    flex-basis: calc(33% - 16px);
+  }
+  .col-2-3 {
+    flex-basis: calc(66% - 16px);
+  }
+}
+
+@import 'front-page';

@@ -1,0 +1,28 @@
+$blue: #1D75BD;
+$darkblue: #0F527F;
+$lightblue: lighten($blue, 50);
+$orange: #D98A1C;
+$black: #404040;
+$white: #ffffff;
+
+$color__background-body: $white;
+$color__background-screen: $white;
+$color__background-hr: #ccc;
+$color__background-button: $orange;
+$color__background-button-hover: $blue;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: $black;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: $blue;
+$color__link-visited: $darkblue;
+$color__link-hover: $orange;
+$color__text-main: $black;
+
+$color__border-button: $orange;
+$color__border-button-hover: $blue;
+$color__border-input: #ccc;
+$color__border-input-focus: $blue;
+$color__border-abbr: #666;

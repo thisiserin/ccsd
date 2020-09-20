@@ -1,0 +1,30 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select,
+	input {
+		max-width: 100%;
+	}
+
+  h1,h2,h3,h4,h5,h6 {
+		border-bottom: 1px dotted lighten($blue, 20);
+    margin: 0 0 1em;
+  }
+  h1 {
+    @include font-size(1.7);
+  }
+  h2 {
+    @include font-size(1.5);
+  }
+  h3 {
+    @include font-size(1.3);
+  }
+  h4 {
+    @include font-size(1.1);
+  }
+
+	form {
+		z-index: 999;
+	}
+}

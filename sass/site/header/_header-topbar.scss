@@ -1,0 +1,79 @@
+#topbar {
+  background-color: $darkblue;
+  color: $white;
+  line-height: 1;
+  padding: .25rem;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin-right: 1em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  a {
+    box-shadow: none;
+    color: $white;
+    @include font-size(.9);
+    text-shadow: none;
+  }
+  .request-quote-button {
+    display: none;
+  }
+  .widget {
+    margin: 0;
+  }
+}
+
+.phone-number::before {
+  content: '\f879';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 1em;
+  font-weight: 900;
+  margin-right: .5em;
+}
+
+@media screen and (min-width: $query__small) {
+  #topbar {
+    padding: 1rem;
+
+    ul {
+      text-align: right;
+    }
+    .request-quote-button {
+    	border-bottom: 0px;
+      display: inline-block;
+    	line-height: 1;
+
+    	a,
+    	a:visited {
+    		background-color: $orange;
+    		border-radius: 4px;
+    		color: $white;
+    		padding: .4rem 1rem;
+    		text-align: center;
+    		text-shadow: none;
+    		width: auto;
+
+    		&:hover,
+    		&:focus {
+    			background: $blue;
+    			box-shadow: inset 2px 2px 5px 0 rgba(0,0,0,.2);
+    			color: $white;
+    		}
+    	}
+    }
+  }
+}
+
+@media screen and (min-width: $query__medium) {
+
+}

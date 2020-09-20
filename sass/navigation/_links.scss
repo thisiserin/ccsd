@@ -1,0 +1,45 @@
+a {
+	box-shadow: inset 0 -3px 0 0 $lightblue;
+	color: $color__link;
+	text-decoration: none;
+	text-shadow:
+    -2px -2px white,
+    -2px 2px white,
+    2px -2px white,
+    2px 2px white;
+	transition: all .2s ease-in-out;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: inset 0 -2px 0 0 lighten($orange, 20);
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: 1px dotted;
+		outline-offset: .15em;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+a img {
+	box-shadow: 5px 5px 5px 5px $white;
+	border: 3px solid transparent;
+	transition: all .2s ease-out;
+}
+a:hover img,
+a:focus img,
+a:active img {
+	 box-shadow: 5px 5px 5px 5px $white;
+	 border-color: lighten($blue, 20);
+ }
+
+#wpadminbar a {
+	box-shadow: none;
+}

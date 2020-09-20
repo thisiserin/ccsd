@@ -1,0 +1,223 @@
+.main-navigation {
+	clear: left;
+	display: block;
+	font-family: $headingfont;
+	font-weight: 400;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-top: 1em;
+		padding-left: 0;
+
+		ul {
+			display: none;
+			top: 1.5em;
+			z-index: 99999;
+
+			ul {
+				top: 0;
+			}
+
+			li {
+				padding-left: 1em;
+
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				min-width: 200px;
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		border-bottom: 1px dotted $lightblue;
+		line-height: 44px;
+		position: relative;
+	}
+
+	a {
+		box-shadow: none;
+		color: $darkblue;
+		display: inline-block;
+		padding: .5em 1em .5em 0;
+		text-decoration: none;
+		width: 100%;
+
+		&:visited {
+			color: $darkblue;
+		}
+	}
+
+	a:hover,
+	a:focus {
+		box-shadow: none;
+		color: $color__link-hover;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+
+	.menu-item-has-children,
+	.page_item_has_children {
+		min-width: 218px;
+		position: relative;
+	}
+	.menu-item-has-children > a,
+	.page_item_has_children > a {
+		padding-right: 2em;
+	}
+}
+
+button.dropdown-toggle {
+	position: absolute;
+	right: 0;
+	border: none;
+	background: $blue;
+	color: white;
+	line-height: 44px;
+	padding: 0;
+	top: .5em;
+	width: 44px;
+}
+
+.menu-toggle {
+	background-color: $blue;
+	display: block;
+	float: right;
+	margin: 0 .25rem;
+	padding: 1rem;
+
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0c9";
+    margin-right: .5em;
+  }
+}
+.menu-toggle[aria-expanded="true"]::before {
+	content: "\f00d";
+}
+
+ul#primary-menu {
+	background: $white;
+	border: 1px solid #ccc;
+	border-top: 3px solid $blue;
+	box-shadow: 2px 2px 5px 0 #999;
+	left: 1%;
+	padding: .5rem 1rem;
+	position: absolute;
+	top: 130px;
+	width: 98%;
+	z-index: 99999;
+}
+
+/* Toggle small menu and children on */
+.toggled-on ul,
+.sub-menu.toggled-on,
+.children.toggled-on {
+	display: block;
+}
+
+@media screen and (min-width: $query__medium) {
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation {
+
+		.menu-item-has-children > a,
+		.page_item_has_children > a {
+			padding-right: 2em;
+			background: $white;
+		}
+
+		ul {
+			display: block;
+			text-align: right;
+
+			ul {
+				background: $white;
+				display: block;
+				left: -9999px;
+				margin-left: 0;
+				padding: 0;
+				position: absolute;
+				text-align: left;
+				top: 100%;
+
+				li {
+					padding-left: 0;
+
+					a {
+						background: none;
+						padding: .5em;
+					}
+				}
+			}
+
+			li {
+				border-bottom: 0;
+				display: inline-block;
+				line-height: 1.5;
+				position: relative;
+
+				a {
+					padding: .4em 1em;
+				}
+			}
+
+			/* If you want dropdowns to open on hover, uncomment this: */
+			li:hover > ul,
+			li:focus > ul {
+				left: auto;
+			}
+		}
+
+		.menu-item-has-children,
+		.page_item_has_children {
+			min-width: 100px;
+		}
+
+	}
+
+	button.dropdown-toggle {
+		background: $white;
+		color: $darkblue;
+		line-height: 1;
+		margin: .5em 0 0;
+		padding: .5em .6em 0;
+		top: 0;
+		transform: none;
+		width: auto;
+	}
+
+	ul#primary-menu {
+		background: $white;
+		border: 0;
+		border-top: 0;
+		box-shadow: none;
+		padding: .5rem 1rem;
+		position: static;
+	}
+
+	.sub-menu {
+		background-color: $white;
+		border-top: 3px solid #888888;
+		box-shadow: 0 3px 3px 0 rgba(0,0,0,.2);
+	}
+
+}

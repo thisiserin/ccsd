@@ -1,0 +1,12 @@
+table {
+	border-top: 3px solid $blue;
+	border-left: 1px solid #f3f4f5;
+	border-right: 1px solid #f3f4f5;
+	font-family: $headingfont;
+	margin: 1em 0 1.5em;
+	width: 100%;
+
+	td {
+		padding: .5em 1em;
+	}
+}

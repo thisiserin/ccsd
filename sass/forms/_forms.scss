@@ -1,0 +1,40 @@
+@import "buttons";
+
+@import "fields";
+
+.wpcf7-form {
+	background-color: rgba(255,255,255,.3);
+	border-radius: 4px;
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+	color: $white;
+	padding: 2rem 1.5rem 1rem;
+
+	h2 {
+		@include font-size(2);
+		margin: 0;
+		text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+	}
+
+	input[type="submit"] {
+		margin-top: 1.25em;
+		padding: 1em 2em;
+		width: 100%;
+
+		&:hover,
+		&:focus {
+			background-color: $darkblue;
+		}
+	}
+}
+
+.widget .wpcf7-form {
+	background-image: linear-gradient(90deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.1) 100%),
+										url('http://localhost/ccsd/wp-content/themes/ccsd/img/pressure-wash-deck.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	h2 {
+		border: 0;
+		margin: 0;
+	}
+}

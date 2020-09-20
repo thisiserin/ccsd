@@ -1,0 +1,74 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	border: 1px solid $color__border-input;
+	border-radius: 2px;
+	color: $color__text-input;
+	@include font-size(1);
+	line-height: 1;
+	padding: 19px 10px 15px;
+	width: 100%;
+
+	&:focus {
+		border-color: $color__border-input-focus;
+		color: $color__text-input-focus;
+	}
+}
+
+select {
+	border: 1px solid $color__border-input;
+}
+
+textarea {
+	width: 100%;
+}
+
+.wpcf7 .field-wrapper {
+	position: relative;
+}
+.wpcf7 .field-wrapper > label {
+	left: 10px;
+	opacity: 0;
+	position: absolute;
+	top: 40px;
+	transition: all .2s ease-in-out;
+	z-index: 1;
+}
+.wpcf7 .field-wrapper > label.move {
+	color: $darkblue;
+	font-size: 11px;
+	left: 12px;
+	opacity: 1;
+	top: 28px;
+}
+div.wpcf7-response-output {
+	margin: 1em 0 0;
+	padding: .5em;
+}
+div.wpcf7-validation-errors {
+	background-color: #F7E700;
+	border-radius: 2px;
+	color: #0F527F;
+	@include font-size(.9);
+}
+span.wpcf7-not-valid-tip {
+	background-color: #EB0000;
+	border-radius: 2px;
+	color: $white;
+	@include font-size(.9);
+	margin-top: .25em;
+	padding: .25em .5em;
+}
